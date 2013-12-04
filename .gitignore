@@ -1,6 +1,11 @@
 *.class
 *.log
 
+.DS_Store
+.history
+
+*sublime*
+
 # sbt specific
 dist/*
 target/

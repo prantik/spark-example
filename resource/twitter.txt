@@ -1,0 +1,4 @@
+consumerKey=someKey
+consumerSecret=someSecret
+accessToken=someToken
+accessTokenSecret=someTokenSecret

@@ -9,7 +9,7 @@ object SimpleApp {
   val intervalWindow = 30
 
   def configureTwitterCredentials() = {
-    for (line <- Source.fromFile("project/resource/twitter.txt").getLines()) {
+    for (line <- Source.fromFile("resource/twitter.txt").getLines()) {
       val key :: value :: _ = line.replace(" ", "").split("=").toList
       val fullKey = "twitter4j.oauth." + key;
       System.setProperty(fullKey, value)
@@ -26,7 +26,7 @@ object SimpleApp {
       "TwitterPopularTags",
       Seconds(2),
       SPARK_HOME,
-      Seq(System.getenv("target/scala-2.9.3/simple-project_2.9.3-1.0.jar")))
+      Seq(System.getenv("target/scala-2.9.3/simple-project_2.9.3-1.1.jar")))
 
     val stream = ssc.twitterStream(None, Nil)
 

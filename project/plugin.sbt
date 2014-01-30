@@ -1,5 +1,5 @@
 // Scalariform to autoformat code
-addSbtPlugin("com.typesafe.sbt" % "sbt-scalariform" % "1.0.1")
+addSbtPlugin("com.typesafe.sbt" % "sbt-scalariform" % "1.2.1")
 
 
 resolvers += "Akka Repository" at "http://repo.akka.io/releases/"

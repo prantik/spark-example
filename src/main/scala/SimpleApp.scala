@@ -26,7 +26,7 @@ object SimpleApp {
       "TwitterPopularTags",
       Seconds(2),
       SPARK_HOME,
-      Seq(System.getenv("target/scala-2.9.3/simple-project_2.9.3-1.1.jar")))
+      Seq(System.getenv("target/scala-2.10.3/simple-project_2.10.3-1.1.jar")))
 
     val stream = ssc.twitterStream(None, Nil)
 

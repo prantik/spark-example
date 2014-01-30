@@ -5,7 +5,7 @@ import org.apache.spark.SparkContext._
 import scala.io.Source
 
 object SimpleApp {
-  val SPARK_HOME = "~/spark-0.8.0-incubating"
+  val SPARK_HOME = "/opt/spark/"
   val intervalWindow = 30
 
   def configureTwitterCredentials() = {

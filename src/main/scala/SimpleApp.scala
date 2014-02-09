@@ -1,6 +1,7 @@
 import org.apache.spark.streaming.{ Seconds, StreamingContext }
 import StreamingContext._
 import org.apache.spark.SparkContext._
+import org.apache.spark.streaming.twitter._
 
 import scala.io.Source
 
@@ -28,10 +29,9 @@ object SimpleApp {
       serverLocation,
       "TwitterPopularTags",
       Seconds(2),
-      SPARK_HOME,
-      Seq(System.getenv("target/scala-2.10.3/simple-project_2.10.3-1.1.jar"), "/opt/simple-project-1.0.jar"))
+      SPARK_HOME)
 
-    val stream = ssc.twitterStream(None, Nil)
+    val stream = TwitterUtils.createStream(ssc, None, Nil)
 
     val statuses = stream.map(status => status.getText())
     statuses.print()
@@ -50,6 +50,5 @@ object SimpleApp {
     })
 
     ssc.start()
-
   }
 }

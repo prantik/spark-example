@@ -20,9 +20,9 @@ object SimpleApp {
   def main(args: Array[String]) {
 
     configureTwitterCredentials
-    
+
     val serverLocation = if (args.length > 0) args(0)
-      else "local[4]"
+    else "local[4]"
 
     val ssc = new StreamingContext(
       serverLocation,
